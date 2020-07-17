@@ -24,4 +24,21 @@ for d in data:
 print('一共有', len(new), '笔留言长度小于100')
 print(new[2])
 
+# good = []
+# for d in data:
+# 	if 'good' in d:
+# 		good.append(d)
+# print('一共有', len(good), '笔留言提到good')
+# print(good[0])
+
+#清单快写法 list comprehension
+good = [d for d in data if 'good' in d]
+print(good)
+
+bad = ['bad' in d for d in data]
+print(bad)
+
+bad = []
+for d in data:
+	bad.append('bad' in d)
 
